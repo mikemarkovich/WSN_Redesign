@@ -1,3 +1,33 @@
-div {
-  text-align: center;
+.ad {
+  width: 100vw;
+  vertical-align: middle;
+}
+
+header {
+  background-color: #232f37;
+  display: grid;
+  grid-template: 2rem / 12rem 1fr;
+  align-content: center;
+  padding: 0.5rem;
+}
+
+.logo {
+  color: transparent;
+  font-size: 0;
+  background-image: url("assets/logo_white.png");
+  background-size: contain;
+}
+
+.main-nav {
+  display: none;
+}
+
+@media screen and (min-width: 1280px) {
+  header {
+    grid-template: 2rem / 12rem 1fr 1fr;
+  }
+
+  .main-nav {
+    display: initial;
+  }
 }

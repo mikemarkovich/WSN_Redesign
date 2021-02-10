@@ -1,0 +1,4 @@
+:host {
+  display: grid;
+  grid-template: auto / 10rem 1fr;
+}

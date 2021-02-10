@@ -1,6 +1,233 @@
-/* You can add global styles to this file, and also import other style files */
+/* CUSTOM PROPERTIES */
+:root {
+  /* COLORS */
+  /* Note: These colors could be converted to HSL and programmatically assigned, making better use of custom properties.
+    /* Accent 1
+    -------------------------------------------------*/
+  --accent-1-10: #f0fdfa;
+  --accent-1-20: #cbf2e8;
+  --accent-1-30: #7ed6c1;
+  --accent-1-40: #27c4a5;
+  --accent-1-50: #0e856d;
+  --accent-1-60: #085243;
+  --accent-1-70: #04382d;
 
-html,
-body {
-  font-family: sans-serif;
+  /* Accent 2
+    -------------------------------------------------*/
+  --accent-2-10: #fff8f5;
+  --accent-2-20: #ffd3bf;
+  --accent-2-30: #ff9869;
+  --accent-2-40: #ff6b26;
+  --accent-2-50: #d04a0a;
+  --accent-2-60: #942f00;
+  --accent-2-70: #591e03;
+
+  /* Brand
+    -------------------------------------------------*/
+  --brand-10: #fcf7fb;
+  --brand-20: #edcce5;
+  --brand-30: #e795d4;
+  --brand-40: #db5abd;
+  --brand-50: #b82c97;
+  --brand-60: #771b61;
+  --brand-70: #4f1140;
+
+  /* Common
+    -------------------------------------------------*/
+  --white: #ffffff;
+  --black: #000000;
+
+  /* Negative
+    -------------------------------------------------*/
+  --negative-1: #fff7f5;
+  --negative-2: #fcbfb3;
+  --negative-3: #dd2e0b;
+  --negative-dark: #a12c0b;
+
+  /* Neutral
+    -------------------------------------------------*/
+  --neutral-10: #f5f5f7;
+  --neutral-20: #dee1e3;
+  --neutral-30: #bac0c2;
+  --neutral-40: #8d9599;
+  --neutral-50: #666d70;
+  --neutral-60: #3a4042;
+  --neutral-70: #232526;
+
+  /* Pending
+    -------------------------------------------------*/
+  --pending-1: #fefbef;
+  --pending-2: #f7e5a6;
+  --pending-3: #fac712;
+
+  /* Positive
+    -------------------------------------------------*/
+  --positive-1: #f6faf0;
+  --positive-2: #d9e6c6;
+  --positive-3: #578319;
+
+  /* ICONS (CDN) */
+  /* Action Icons
+    -------------------------------------------------*/
+  --checkmark: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/actions/checkmark.svg");
+  --checkmark-positive: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/actions/checkmark-positive.svg");
+  --checkmark-disabled: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/actions/checkmark-disabled.svg");
+  --close-x: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/actions/close-x.svg");
+  --edit-pencil: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/actions/edit-pencil.svg");
+  --edit-pencil-disabled: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/actions/edit-pencil-disabled.svg");
+  --menu-down: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/actions/menu-down.svg");
+  --sort-up-down: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/forms/sort-up-down.svg");
+  --sort-up-down--white: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/forms/sort-up-down--white.svg");
+
+  /* Arrow Icons
+    -------------------------------------------------*/
+  --chevron-down: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/arrows/chevron-down.svg");
+  --chevron-down-light: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/arrows/chevron-down-light.svg");
+  --chevron-down--accent-1-70: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/arrows/chevron-down--accent-1-70.svg");
+  --chevron-left: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/arrows/chevron-left.svg");
+  --chevron-left-light: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/arrows/chevron-left-light.svg");
+  --chevron-right: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/arrows/chevron-right.svg");
+  --chevron-right-light: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/arrows/chevron-right-light.svg");
+  --chevron-up: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/arrows/chevron-up.svg");
+  --chevron-up-light: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/arrows/chevron-up-light.svg");
+  --chevron-up--accent-1-70: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/arrows/chevron-up--accent-1-70.svg");
+
+  /* Decoration Icons
+    -------------------------------------------------*/
+  --csr: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/decorations/csr.svg");
+  --link-document: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/decorations/document.svg");
+  --link-external: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/decorations/external.svg");
+  --profile-user: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/decorations/profile-user.svg");
+
+  /* Status Icons
+    -------------------------------------------------*/
+  --alert-danger: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/statuses/alert-danger.svg");
+  --info-exclamation: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/statuses/info-exclamation.svg");
+  --info-exclamation-warning: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/statuses/info-exclamation-warning.svg");
+  --success-circle: url("https://websolutionscdn.blob.core.windows.net/orchid/icons/statuses/success-circle.svg");
+
+  /* SHADOWS */
+  --dialog-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3),
+    0 4px 8px 3px rgba(0, 0, 0, 0.15);
+
+  /* CUSTOM DEPENDENCIES */
+  /* COLORS */
+  /* Disabled
+    -------------------------------------------------*/
+  --disabled-foreground: var(--neutral-40);
+  --disabled-background: var(--neutral-20);
+}
+
+/* RESET */
+*,
+::before,
+::after {
+  /* 1 */
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+}
+
+html {
+  /* 2 */
+  font: 400 16px "Fira Sans", sans-serif;
+  line-height: 1.5;
+  color: var(--neutral-70);
+  background-color: #f7f7f7;
+  overflow-y: scroll;
+}
+
+body,
+blockquote,
+dd,
+dl,
+fieldset,
+figure,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+menu,
+ol,
+p,
+pre,
+ul {
+  /* 3 */
+  margin: 0;
+}
+
+a {
+  /* 4 */
+  color: var(--brand-50);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a:hover {
+  /* 4 */
+  text-decoration: underline;
+}
+
+button,
+input,
+select,
+textarea {
+  /* 5 */
+  font: inherit;
+  color: inherit;
+}
+
+:disabled {
+  /* 6 */
+  cursor: not-allowed;
+}
+
+fieldset {
+  /* 7 */
+  padding: 0;
+  border: 0;
+}
+
+hr {
+  /* 7 */
+  border-style: solid;
+}
+
+fieldset legend {
+  /* 7 */
+  padding: 0;
+}
+
+address {
+  /* 7 */
+  font-style: normal;
+}
+
+table {
+  /* 8 */
+  border-collapse: collapse;
+}
+
+textarea {
+  /* 9 */
+  resize: vertical;
+}
+
+::-webkit-scrollbar {
+  /* 10 */
+  width: 0.375rem;
+}
+
+::-webkit-scrollbar-track {
+  /* 10 */
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  /* 10 */
+  background-color: var(--neutral-20);
+  border-radius: 1rem;
 }
