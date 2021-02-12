@@ -231,3 +231,7 @@ textarea {
   background-color: var(--neutral-20);
   border-radius: 1rem;
 }
+
+img {
+  vertical-align: middle;
+}

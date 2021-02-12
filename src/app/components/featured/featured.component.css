@@ -1,0 +1,68 @@
+:host {
+  display: grid;
+  grid-template: auto / minmax(auto, 80rem);
+  justify-content: center;
+}
+
+.featured {
+  background-color: #1b3b6f;
+  padding: 0.25rem 0;
+  display: grid;
+  gap: 1rem;
+  grid-template: 1fr / auto;
+}
+
+figure {
+  position: relative;
+}
+
+figure::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+figure img {
+  display: block;
+}
+
+figure figcaption {
+  background-color: transparent;
+  color: var(--white);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+}
+
+figure figcaption h1 {
+  font-size: 2rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+figure figcaption h1 span {
+  color: #ee964b;
+}
+
+figure figcaption p {
+  margin-top: 0.5rem;
+  line-height: 1.25;
+}
+
+.featured article:first-of-type {
+}
+
+.featured img {
+  width: 100%;
+}
