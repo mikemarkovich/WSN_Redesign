@@ -73,7 +73,7 @@ figure figcaption p {
 
 .featured-headlines h3 {
   color: var(--white);
-  background-color: #1b3b6f;
+  background-color: #21295c;
   text-transform: uppercase;
   font-size: 2rem;
   padding: 1rem;
@@ -82,6 +82,7 @@ figure figcaption p {
 .featured-headlines ul {
   list-style: none;
   padding: 0;
+  background-color: #1b3b6f;
 }
 
 .featured-headlines a {
