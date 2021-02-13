@@ -1,6 +1,6 @@
 :host {
   display: grid;
-  grid-template: auto / minmax(auto, 72rem) minmax(auto, 8rem);
+  grid-template: auto / auto;
   justify-content: center;
   margin: 1rem 0;
 }
@@ -10,9 +10,7 @@
 }
 
 :host > div:last-of-type {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  display: none;
 }
 
 .scores {
@@ -115,4 +113,16 @@
 
 [data-team="southmoreland"] {
   background-image: url("../../../assets/teams/southmoreland.png");
+}
+
+@media screen and (min-width: 80rem) {
+  :host {
+    grid-template: auto / minmax(auto, 72rem) minmax(auto, 8rem);
+  }
+
+  :host > div:last-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
 }

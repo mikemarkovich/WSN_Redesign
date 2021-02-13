@@ -41,29 +41,18 @@ nav a {
   position: relative;
 }
 
-nav a:hover {
-  text-decoration: none;
-}
-
-nav a::after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 5px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #25aae1;
-  transform: scale(0);
-  transition: transform 0.2s;
-}
-
-nav a:hover::after {
-  transform: scale(1);
+nav a span {
+  margin-right: 0.25rem;
+  color: #f4d35e;
 }
 
 .main-nav {
   display: none;
+}
+
+.social {
+  height: 1rem;
+  background-color: #1b3b6f;
 }
 
 @media screen and (min-width: 1280px) {
@@ -73,5 +62,26 @@ nav a:hover::after {
 
   .main-nav {
     display: flex;
+  }
+
+  nav a:hover {
+    text-decoration: none;
+  }
+
+  nav a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #25aae1;
+    transform: scale(0);
+    transition: transform 0.2s;
+  }
+
+  nav a:hover::after {
+    transform: scale(1);
   }
 }

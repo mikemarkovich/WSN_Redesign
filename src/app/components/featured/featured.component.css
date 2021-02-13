@@ -6,9 +6,9 @@
 
 .featured {
   padding: 0.125rem 0;
-  background-color: #21295c;
+  background-color: transparent;
   display: grid;
-  gap: 0.125rem;
+  gap: 1rem;
   grid-template: repeat(auto-fit, 1fr) / 1fr;
 }
 
@@ -57,7 +57,7 @@ figure figcaption h1 {
 }
 
 figure figcaption h1 span {
-  color: #ee964b;
+  color: #f4d35e;
 }
 
 figure figcaption h2 {
@@ -91,9 +91,14 @@ figure figcaption p {
   display: block;
 }
 
+.featured-headlines a:hover {
+  text-decoration: none;
+}
+
 @media screen and (min-width: 80rem) {
   .featured {
     padding: 0.125rem;
+    background-color: #21295c;
     grid-template: repeat(4, 8rem) / repeat(4, 1fr);
     gap: 0.125rem;
   }
@@ -140,6 +145,7 @@ figure figcaption p {
   .featured .featured-headlines ul {
     display: grid;
     grid-template: repeat(5, 1fr) / 1fr;
+    align-items: center;
   }
 
   .featured .featured-headlines ul li {
@@ -147,7 +153,6 @@ figure figcaption p {
   }
 
   .featured .featured-headlines a:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.1);
   }
 }
