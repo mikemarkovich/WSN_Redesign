@@ -6,6 +6,7 @@
 header {
   position: sticky;
   top: 0;
+  z-index: 1;
   background-color: #21295c;
   display: grid;
   grid-template: 4rem / 12rem 1fr;
@@ -56,10 +57,10 @@ nav a span {
   animation: pulsate-fwd 1s ease-in-out infinite both;
 }
 
-.social {
-  height: 1rem;
+/* .social {
+  height: 2rem;
   background-color: #1b3b6f;
-}
+} */
 
 @media screen and (min-width: 1280px) {
   header {
