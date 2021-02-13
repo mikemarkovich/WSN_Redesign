@@ -4,6 +4,8 @@
 }
 
 header {
+  position: sticky;
+  top: 0;
   background-color: #21295c;
   display: grid;
   grid-template: 4rem / 12rem 1fr;
