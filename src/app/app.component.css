@@ -31,17 +31,18 @@ header {
 }
 
 .main-nav {
-  display: none;
   position: fixed;
   top: 7rem;
   left: 0;
   width: 100vw;
   height: 100vh;
   background-color: var(--white);
+  transition: transform 0.2s;
+  transform: translateX(-100vw);
 }
 
 .main-nav.toggled {
-  display: block;
+  transform: translateX(0);
 }
 
 /* nav {
