@@ -3,9 +3,13 @@
   src="https://uploads.codesandbox.io/uploads/user/7fb5019c-a50e-47ab-9f3c-12c9f53fb8bc/Cbe4-excela-health.gif"
 />
 <header>
-  <button class="nav-toggle">Menu</button>
+  <button class="nav-toggle" (click)="toggleNav()">Menu</button>
   <a class="logo" href="/">Westmoreland Sports Network</a>
-  <nav class="main-nav" aria-label="Main Navigation">
+  <nav
+    class="main-nav"
+    aria-label="Main Navigation"
+    [ngClass]="{'toggled':isOpen}"
+  >
     <a href="#"><span>Live!</span> on WSN</a>
     <a href="#">Basketball</a>
     <a href="#">Baseball</a>

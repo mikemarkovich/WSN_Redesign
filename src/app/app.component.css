@@ -1,6 +1,7 @@
 .ad {
   width: 100%;
   vertical-align: middle;
+  height: 3rem;
 }
 
 header {
@@ -30,12 +31,17 @@ header {
 }
 
 .main-nav {
+  display: none;
   position: fixed;
-  top: 0;
+  top: 7rem;
   left: 0;
   width: 100vw;
   height: 100vh;
   background-color: var(--white);
+}
+
+.main-nav.toggled {
+  display: block;
 }
 
 /* nav {
@@ -72,7 +78,10 @@ nav a span {
   background-color: #1b3b6f;
 } */
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 769px) {
+  .ad {
+    height: unset;
+  }
   header {
     grid-template: 4rem / 12rem 1fr 1fr;
   }
