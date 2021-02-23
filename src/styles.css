@@ -232,7 +232,13 @@ textarea {
   border-radius: 1rem;
 }
 
-img {
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  /* 10 */
   vertical-align: middle;
 }
 

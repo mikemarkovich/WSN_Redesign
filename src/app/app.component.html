@@ -5,16 +5,50 @@
 <header>
   <button class="nav-toggle" (click)="toggleNav()">Menu</button>
   <a class="logo" href="/">Westmoreland Sports Network</a>
-  <nav
-    class="main-nav"
-    aria-label="Main Navigation"
-    [ngClass]="{'toggled':isOpen}"
-  >
-    <a href="#"><span>Live!</span> on WSN</a>
-    <a href="#">Basketball</a>
-    <a href="#">Baseball</a>
-    <a href="#">Hockey</a>
-    <a href="#">Softball</a>
+  <nav aria-label="Main Navigation" [ngClass]="{'toggled':isOpen}">
+    <a class="live" href="#"><span>Live!</span> on WSN</a>
+    <a href="#">Scores</a>
+    <button
+      (click)="isSchoolsActive=!isSchoolsActive"
+      [ngClass]="{'is--active':isSchoolsActive}"
+    >
+      Schools
+    </button>
+    <section>
+      <a href="#">Belle Vernon</a>
+      <a href="#">Burrell</a>
+      <a href="#">Derry</a>
+      <a href="#">Franklin Regional</a>
+      <a href="#">Greensburg Central Catholic</a>
+      <a href="#">Greensburg Salem</a>
+      <a href="#">Hempfield</a>
+      <a href="#">Jeannette</a>
+      <a href="#">Kiski Area</a>
+      <a href="#">Latrobe</a>
+      <a href="#">Ligonier Valley</a>
+      <a href="#">Mt. Pleasant</a>
+      <a href="#">Norwin</a>
+      <a href="#">Penn-Trafford</a>
+      <a href="#">Southmoreland</a>
+      <a href="#">Valley</a>
+      <a href="#">Yough</a>
+    </section>
+    <button
+      (click)="isSportsActive=!isSportsActive"
+      [ngClass]="{'is--active':isSportsActive}"
+    >
+      Sports
+    </button>
+    <section>
+      <a href="#">Baseball</a>
+      <a href="#">Basketball</a>
+      <a href="#">Football</a>
+      <a href="#">Hockey</a>
+      <a href="#">Soccer</a>
+      <a href="#">Softball</a>
+      <a href="#">Volleyball</a>
+      <a href="#">Wrestling</a>
+    </section>
   </nav>
 </header>
 <div class="social"></div>
