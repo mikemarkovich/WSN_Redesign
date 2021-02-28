@@ -118,7 +118,7 @@ nav section a {
     overflow-y: initial;
     display: grid;
     grid-template: 4rem / repeat(4, max-content);
-    gap: 2rem;
+    gap: 1rem;
     padding: 0 2rem;
   }
 
@@ -131,6 +131,7 @@ nav section a {
     justify-content: center;
     align-items: center;
     position: relative;
+    padding: 0 1rem;
   }
 
   nav button {
@@ -143,7 +144,8 @@ nav section a {
     text-decoration: none;
   }
 
-  nav a::after {
+  nav a::after,
+  nav button::after {
     content: "";
     display: block;
     position: absolute;
@@ -156,8 +158,29 @@ nav section a {
     transition: transform 0.2s;
   }
 
-  nav a:hover::after {
+  nav a:hover::after,
+  nav button.is--active::after {
     transform: scale(1);
+  }
+
+  nav button + section {
+    display: flex;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    right: 0;
+    transform: scaleY(0);
+    color: transparent;
+    transition: transform 0.2s ease 0.2s;
+    transform-origin: top center;
+  }
+
+  nav button.is--active + section {
+    transform: scaleY(1);
+  }
+
+  nav section a {
+    background-color: #25aae1;
   }
 
   /* .live {
